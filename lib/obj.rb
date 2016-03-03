@@ -1,0 +1,6 @@
+require_relative './obj/and'
+require_relative './obj/not'
+require_relative './obj/or'
+require_relative './obj/order'
+require_relative './obj/parameter'
+require_relative './obj/query'
