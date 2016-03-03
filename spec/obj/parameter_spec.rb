@@ -40,7 +40,7 @@ describe Filterparams::Parameter do
     end
 
     it 'should return the param name as identification' do
-      expect(@parameter.name).to eq 'param_name'
+      expect(@parameter.identification).to eq 'param_name'
     end
 
     context 'when an alias is given' do
@@ -89,6 +89,10 @@ describe Filterparams::Parameter do
       @parameter.alias = 'param_alias'
       @other_parameter.alias = 'param_alias'
       expect(@parameter.equal? @other_parameter).to be_truthy
+    end
+
+    it 'should report another item as not being equal to the parameter' do
+      expect(@parameter.equal? 'other').to be_falsey
     end
 
   end

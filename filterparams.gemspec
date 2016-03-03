@@ -10,5 +10,6 @@ Gem::Specification.new do |s|
 
   s.add_development_dependency 'rspec', ['~> 3.4']
   s.add_development_dependency 'rake'
+  s.add_development_dependency 'simplecov'
   s.add_runtime_dependency 'parslet', ['~> 1.6', '>= 1.6.0']
 end
