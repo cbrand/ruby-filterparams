@@ -13,7 +13,7 @@ module Filterparams
     def clone
       query = Filterparams::Query.new
       query.filters = filters
-      query.orders.push(*self.orders)
+      query.orders.push(*orders)
       query
     end
 
@@ -25,11 +25,11 @@ module Filterparams
 
     def filter(filter_obj)
       query = clone
-      if query.filters.nil?
-        query.filters = filter_obj
-      else
-        query.filters = Filterparams::And.new(query.filters, filter_obj)
-      end
+      query.filters = if query.filters.nil?
+                        filter_obj
+                      else
+                        Filterparams::And.new(query.filters, filter_obj)
+                      end
       query
     end
   end
