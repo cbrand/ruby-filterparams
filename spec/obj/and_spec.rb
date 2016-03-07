@@ -1,4 +1,5 @@
 require 'rspec'
+require 'spec_helper'
 require 'obj/and'
 require 'obj/or'
 
