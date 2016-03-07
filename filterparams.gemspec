@@ -14,5 +14,6 @@ Gem::Specification.new do |s|
   s.add_development_dependency 'simplecov-json'
   s.add_development_dependency 'simplecov-rcov'
   s.add_development_dependency 'rubocop-checkstyle_formatter'
+  s.add_development_dependency 'ci_reporter_rspec'
   s.add_runtime_dependency 'parslet', ['~> 1.6', '>= 1.6.0']
 end
