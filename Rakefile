@@ -11,7 +11,6 @@ end
 
 begin
   require 'rubocop/rake_task'
-  require 'rubocop/formatter/checkstyle_formatter'
   RuboCop::RakeTask.new(:rubocop) do |task|
     task.patterns = ['lib/**/*.rb']
     task.fail_on_error = false
