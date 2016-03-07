@@ -7,4 +7,7 @@ SimpleCov.formatters = [
   SimpleCov::Formatter::JSONFormatter,
   SimpleCov::Formatter::RcovFormatter
 ]
-SimpleCov.start
+
+SimpleCov.start do
+  add_filter "/spec/"
+end
