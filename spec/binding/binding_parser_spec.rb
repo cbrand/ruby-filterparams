@@ -43,4 +43,8 @@ describe Filterparams::BindingParser do
     expect(parser).to parse('(a | b)&!( b)|c& e')
   end
 
+  it 'should parse a double not statement' do
+    expect(parser).to parse('!!a')
+  end
+
 end

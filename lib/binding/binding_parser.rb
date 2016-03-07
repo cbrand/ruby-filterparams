@@ -24,7 +24,8 @@ module Filterparams
     rule(:or_clause) {
       or_clause_element.as(:left) >> space? >> or_operator.as(:operator) >> space? >> clause.as(:right)
     }
-    rule(:not_operation) { str('!').as(:operator) >> space? >> clause.as(:clause) }
+    rule(:inner_not) { bracket | parameter | not_operation }
+    rule(:not_operation) { str('!').as(:operator) >> space? >> inner_not.as(:clause) }
 
     rule(:clause) { or_clause | and_clause | parameter | bracket | not_operation }
 
