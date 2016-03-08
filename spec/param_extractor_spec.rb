@@ -58,6 +58,21 @@ describe Filterparams::ParamExtractor do
     it 'should extract the correct name of an parameter' do
       expect(param_hash['alias'].name).to eq 'other'
     end
+
+  end
+
+  context 'when having unkown parameters' do
+
+    before :each do
+      add_filter 'name', 'value'
+      @params['filter[order]'] = 'abc'
+    end
+
+    it 'should ignore them' do
+      expect(param_hash).to have_key 'name'
+      expect(param_hash.keys.size).to eq 1
+    end
+
   end
 
 end
