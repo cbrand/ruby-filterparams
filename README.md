@@ -10,8 +10,8 @@ and encapsulates it's syntax through the prefixed `filter` parameters.
 
 ## Installation ##
 
-The library is available through the `filterparams` gemfile and thus
-can be installed through the command line or by adding the package to
+The library is available through the `filterparams` gem on [RubyGems](https://rubygems.org/gems/filterparams)
+and thus can be installed through the command line or by adding the package to
 your Gemfile.
 
 ```
