@@ -181,6 +181,15 @@ filter[order]=name&filter[order]=first_name&filter[order]=desc(balance)
 As you can see the `desc()` definition can be used to indicate
 reverse ordering.
 
+## License ##
+
+The project is licensed under the [MIT License](https://opensource.org/licenses/MIT).
+
+## Used libraries ##
+
+For parsing the query parameters the [`parslet`](https://kschiess.github.io/parslet/)
+library is used. It is released under the [MIT License](https://github.com/kschiess/parslet/blob/master/LICENSE).
+
 ## Other Languages ##
 
 This is a list of projects implementing the same API for other languages.
