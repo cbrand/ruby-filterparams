@@ -1,7 +1,7 @@
 require 'rspec'
 require 'spec_helper'
 require 'parslet/rig/rspec'
-require_relative '../../lib/binding/binding_parser'
+require 'filterparams/binding/binding_parser'
 require 'parslet/convenience'
 
 

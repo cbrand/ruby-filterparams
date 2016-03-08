@@ -1,4 +1,4 @@
-require_relative '../lib/order_extractor'
+require_relative '../lib/filterparams/order_extractor'
 
 describe Filterparams::OrderExtractor do
 

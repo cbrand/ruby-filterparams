@@ -1,7 +1,7 @@
 require 'rspec'
 require 'spec_helper'
-require_relative '../../lib/obj'
-require_relative '../../lib/binding'
+require 'filterparams/obj'
+require 'filterparams/binding'
 
 
 describe Filterparams::BindingTransform do

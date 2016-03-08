@@ -1,7 +1,7 @@
 require 'rspec'
 require 'spec_helper'
-require 'obj/and'
-require 'obj/or'
+require 'filterparams/obj/and'
+require 'filterparams/obj/or'
 
 describe Filterparams::And do
 

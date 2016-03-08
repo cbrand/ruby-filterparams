@@ -1,6 +1,6 @@
 require 'rspec'
 require 'spec_helper'
-require 'obj/order'
+require 'filterparams/obj/order'
 
 
 describe Filterparams::Order do

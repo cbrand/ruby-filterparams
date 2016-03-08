@@ -1,6 +1,6 @@
 require 'rspec'
 require 'spec_helper'
-require 'obj/not'
+require 'filterparams/obj/not'
 
 
 describe Filterparams::Not do

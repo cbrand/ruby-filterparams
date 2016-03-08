@@ -1,6 +1,6 @@
 require 'uri'
 require 'cgi'
-require_relative '../lib/api'
+require_relative '../lib/filterparams'
 
 
 describe 'Api' do
@@ -100,8 +100,6 @@ describe 'Api' do
     data = CGI.parse(URI.parse(url).query)
 
     expect(Filterparams::extract_query(data)).to be_instance_of Filterparams::Query
-    require 'pp'
-    pp(Filterparams::extract_query(data))
   end
 
 end

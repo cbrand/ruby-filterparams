@@ -1,6 +1,6 @@
 require 'rspec'
 require 'spec_helper'
-require 'obj/parameter'
+require 'filterparams/obj/parameter'
 
 
 describe Filterparams::Parameter do

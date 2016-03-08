@@ -1,6 +1,6 @@
 require 'rspec'
 require 'spec_helper'
-require_relative '../lib/param_extractor'
+require_relative '../lib/filterparams/param_extractor'
 
 
 describe Filterparams::ParamExtractor do
