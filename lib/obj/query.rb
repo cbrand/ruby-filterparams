@@ -18,8 +18,12 @@ module Filterparams
     end
 
     def add_order(name, descending = false)
+      add_order_obj Filterparams::Order.new(name, descending)
+    end
+
+    def add_order_obj(*order_obj)
       query = clone
-      query.orders.push(Filterparams::Order.new(name, descending))
+      query.orders.push *order_obj
       query
     end
 
