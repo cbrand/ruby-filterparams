@@ -1,9 +1,11 @@
 Gem::Specification.new do |s|
   s.name        = 'filterparams'
-  s.version     = '0.9.1'
+  s.version     = '0.9.2'
   s.date        = '2016-03-08'
   s.summary     = 'Parser for filterparams query parameters'
-  s.description = File.read('README.md')
+  s.description = 'Parses filter parameters compatible query parameters and returns an object ' +
+    'which can be used to be mapped on top of a backend system. More information is available on Github ' +
+    '( https://github.com/cbrand/ruby-filterparams ).'
   s.license     = 'MIT'
   s.authors     = ['Christoph Brand']
   s.email       = 'christoph@brand.rest'
