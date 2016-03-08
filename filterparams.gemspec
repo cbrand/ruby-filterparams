@@ -11,6 +11,7 @@ Gem::Specification.new do |s|
   s.email       = 'christoph@brand.rest'
   s.files       = Dir.glob('{bin,lib}/**/*') + %w{README.md LICENSE.txt}
   s.homepage    = 'https://github.com/cbrand/ruby-filterparams'
+  s.required_ruby_version = '>= 1.9.0'
 
   s.add_development_dependency 'rspec', ['~> 3.4']
   s.add_development_dependency 'rake'
