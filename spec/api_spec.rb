@@ -1,3 +1,5 @@
+require 'uri'
+require 'cgi'
 require_relative '../lib/api'
 
 
@@ -85,6 +87,21 @@ describe 'Api' do
       expect(query.filters).to be_instance_of Filterparams::And
     end
 
+  end
+
+  it 'should be able to process the example specified in the readme' do
+
+    url = 'http://www.example.com/users?' +
+      'filter[param][name][like][no_brand_name]=doe' +
+      '&filter[param][first_name]=doe%' +
+      '&filter[binding]=%28%21no_brand_name%26first_name%29' +
+      '&filter[order]=name&filter[order]=desc(first_name)'
+
+    data = CGI.parse(URI.parse(url).query)
+
+    expect(Filterparams::extract_query(data)).to be_instance_of Filterparams::Query
+    require 'pp'
+    pp(Filterparams::extract_query(data))
   end
 
 end

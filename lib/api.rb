@@ -24,6 +24,10 @@ module Filterparams
     ORDER_KEY = 'filter[order]'.freeze
 
     def extract_filter(filter_string, params)
+      if filter_string.is_a? Array
+        filter_string = filter_string[0]
+      end
+
       parsed = Filterparams::BindingParser.new.parse(filter_string)
       Filterparams::BindingTransform.new(params).apply(parsed)
     end
