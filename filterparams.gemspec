@@ -1,12 +1,15 @@
 Gem::Specification.new do |s|
   s.name        = 'filterparams'
-  s.version     = '1.0.0'
-  s.date        = '2016-03-03'
-  s.summary     = ''
-  s.description = ''
+  s.version     = '0.9.0'
+  s.date        = '2016-03-08'
+  s.summary     = 'Parser for filterparams query parameters'
+  s.description = 'Parses filterparam compatible query parameters and returns an object ' +
+    'which can be used to be mapped on top of a backend system.'
+  s.license     = 'MIT'
   s.authors     = ['Christoph Brand']
   s.email       = 'christoph@brand.rest'
-  s.files       = Dir.glob('{bin,lib}/**/*')
+  s.files       = Dir.glob('{bin,lib}/**/*') + %w{README.md LICENSE.txt}
+  s.homepage    = 'https://github.com/cbrand/ruby-filterparams'
 
   s.add_development_dependency 'rspec', ['~> 3.4']
   s.add_development_dependency 'rake'
