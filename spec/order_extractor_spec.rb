@@ -6,12 +6,16 @@ describe Filterparams::OrderExtractor do
     @orders = []
   end
 
-  def add_order(name, direction=nil)
+  def order_name(name, direction=nil)
     order = name
     unless direction.nil?
       order = "#{direction}(#{order})"
     end
-    @orders.push order
+    order
+  end
+
+  def add_order(name, direction=nil)
+    @orders.push order_name name, direction
   end
 
   def orders
@@ -92,6 +96,12 @@ describe Filterparams::OrderExtractor do
       expect(order.name).to eq 'param'
     end
 
+  end
+
+
+  it 'should be able to transform a single non arrayed param' do
+    @orders = order_name 'orderParam'
+    expect(order.name).to eq 'orderParam'
   end
 
 end
