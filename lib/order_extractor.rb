@@ -7,7 +7,6 @@ module Filterparams
       (?<param>\w+)
     )/x
 
-
     def initialize(orders)
       @orders = orders
     end
@@ -19,8 +18,8 @@ module Filterparams
     private
 
     def extract_orders
-      @orders.map {|order| generate_order(order)}
-        .reject {|order| order.nil?}
+      @orders.map { |order| generate_order(order) }
+             .reject(&:nil?)
     end
 
     def generate_order(order_string)
@@ -37,6 +36,5 @@ module Filterparams
 
       Filterparams::Order.new(name, direction == 'desc')
     end
-
   end
 end
