@@ -13,7 +13,7 @@ describe Filterparams::ParamExtractor do
     described_class.new(@params).params_hash
   end
 
-  def param_name(name, params={})
+  def name_param(name, params={})
     res = "filter[param][#{name}]"
 
     unless params[:filter].nil?

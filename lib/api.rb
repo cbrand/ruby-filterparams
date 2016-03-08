@@ -8,11 +8,11 @@ module Filterparams
     def extract_query(data)
       params = extract_params_hash data
       orders = extract_orders data
-      if data.has_key? FILTER_BINDING_KEY
-        filter = extract_filter data[FILTER_BINDING_KEY], params
-      else
-        filter = auto_filter_for params
-      end
+      filter = if data.key? FILTER_BINDING_KEY
+                 extract_filter data[FILTER_BINDING_KEY], params
+               else
+                 auto_filter_for params
+               end
 
       query = Filterparams::Query.new
       query.filter(filter).add_order_obj(*orders)
@@ -20,8 +20,8 @@ module Filterparams
 
     private
 
-    FILTER_BINDING_KEY = 'filter[binding]'
-    ORDER_KEY = 'filter[order]'
+    FILTER_BINDING_KEY = 'filter[binding]'.freeze
+    ORDER_KEY = 'filter[order]'.freeze
 
     def extract_filter(filter_string, params)
       parsed = Filterparams::BindingParser.new.parse(filter_string)
@@ -41,6 +41,5 @@ module Filterparams
         Filterparams::And.new(left, right)
       end
     end
-
   end
 end

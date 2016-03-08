@@ -23,7 +23,7 @@ module Filterparams
 
     def add_order_obj(*order_obj)
       query = clone
-      query.orders.push *order_obj
+      query.orders.push(*order_obj)
       query
     end
 

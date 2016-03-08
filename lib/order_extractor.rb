@@ -8,9 +8,7 @@ module Filterparams
     )/x
 
     def initialize(orders)
-      unless orders.is_a? Array
-        orders = [orders]
-      end
+      orders = [orders] unless orders.is_a? Array
 
       @orders = orders
     end
