@@ -28,6 +28,14 @@ module Filterparams
 
     def match_hashes
       matches = @params.map do |key, value|
+        if value.is_a? Array
+          value = if value.size > 0
+                    value[0]
+                  else
+                    nil
+                  end
+        end
+
         {
           match: FILTER_MATCHES.match(key),
           value: value

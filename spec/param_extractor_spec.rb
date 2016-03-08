@@ -75,4 +75,14 @@ describe Filterparams::ParamExtractor do
 
   end
 
+  it 'should be able to extract parameters when an array is passed' do
+    @params[name_param('test')] = ['asd']
+    expect(param_hash['test'].value).to eq 'asd'
+  end
+
+  it 'should treat an empty list as a nil value' do
+    @params[name_param('test')] = []
+    expect(param_hash['test'].value).to be_nil
+  end
+
 end
